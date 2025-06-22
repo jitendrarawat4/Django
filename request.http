@@ -1,0 +1,35 @@
+### CREATE USER
+POST http://127.0.0.1:8000/api/users/
+Content-Type: application/json
+
+{
+  "name": "Rawat",
+  "email": "rawat@example.com"
+}
+
+###
+@user_id = 6853252787888608718be08e
+
+### GET ALL USERS
+GET http://127.0.0.1:8000/api/users/
+
+###
+
+### GET USER BY ID
+GET http://127.0.0.1:8000/api/users/{{user_id}}/
+
+###
+
+### UPDATE USER
+PUT http://127.0.0.1:8000/api/users/{{user_id}}/
+Content-Type: application/json
+
+{
+  "name": "Alice Updated",
+  "email": "alice.updated@example.com"
+}
+
+###
+
+### DELETE USER
+DELETE http://127.0.0.1:8000/api/users/{{user_id}}/
